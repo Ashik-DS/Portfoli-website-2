@@ -1,0 +1,582 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap");
+/* ==================Basic CSS before start creating website =====  Start Here ============ */
+
+
+
+:root {
+
+    --primary : #fca61f;
+    --primary2:#6f34fe;
+    --normal : #fafafa;
+    --balck :  #13131a;
+    --bg : #0c1013;
+    --danger : #f75842;
+    --border : 0.1rem solid rgba(255, 255, 255, 0.3);
+
+    --container-width-lg : 85%;
+    --container-width-md  : 90%;
+    --container-width-sm  : 94%;
+
+}
+
+*{
+   
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none ;
+    transition: all 0.5s linear;
+    scroll-behavior: smooth;
+    outline-offset:none;
+
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.web-width{
+    width: var(--container-width-lg);
+    margin: 0, auto;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--normal);
+  }
+  button{
+    border: none;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+/* ==================Basic CSS before start creating website =====  End  Here ============ */
+
+
+/* ==================Header menu part  CSS =====  Start  Here ============ */
+
+header{
+    background-color: var(--balck);
+    text-align: center;
+    margin: auto;
+ 
+   
+    
+}
+.navbar{
+  
+    font-family: "Josefin Sans", sans-serif ;
+ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:1.3rem;
+   padding: 1rem ;
+   position: fixed;
+   width: 100%;
+   z-index: 999;
+   text-align: center;
+   margin: auto;
+
+   background-color: var(--balck);
+ 
+}
+.nav-logo a {
+    color: var(--normal);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.nav-logo:hover{
+    transform: rotateX(360deg);
+    transition: 1.3s;
+ 
+   
+   
+}
+.nav-logo a span{
+    color: var(--primary2);
+    font-weight: 600;
+    
+}
+
+.nav-menu ul {
+display: flex;
+gap: 3rem;
+margin: 0;
+padding: 0;
+
+}
+
+.nav-menu ul li a {
+    color: var(--normal);
+    position: relative;
+    
+}
+.nav-menu ul li a::after{
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+    content: "";
+    top: 33px;
+    left: 0%;
+    height: 2px;
+  
+    position: absolute;
+    background-color:#29e9bc;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+ width: 0;
+
+  
+
+}
+.nav-menu ul li a:hover::after{
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 100%;
+    
+ 
+ 
+    
+}
+.nav-menu ul li a:hover{
+   color: #29e9bc;
+}
+.nav-btn button{
+ border: none;
+ border-radius: 1rem !important;
+
+ 
+}
+.btns{
+height: 2.5rem;
+width: 7rem;
+border-radius: .3rem;
+background-color:#29e9bc;
+
+}
+.btns:hover{
+    background-color: transparent;
+    color:white ;
+    border: 1px solid #29e9bc;
+}
+
+
+
+
+.open-menu, .close-menu{
+    display: none;
+}
+
+/* ==================Header menu part   CSS =====  End   Here ============ */
+/* ==================Banner  part   CSS =====  Start  Here ============ */
+
+
+.banner-section{
+    background-color:black;
+    padding: 6rem;
+    color: var(--normal);
+}
+
+.banner-text button:hover{
+    transform: translateY(-20px);
+    transition-duration: 1s;
+    
+
+}
+
+.banner-img img{
+    width: 125%;
+    margin-top: -8rem;
+ 
+    overflow: hidden;
+    z-index: -1;
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* ==================Banner  part   CSS =====  End   Here ============ */
+
+/* ==================service   part   CSS =====  start  Here ============ */
+
+.my-service{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.service-item img{
+width: 6rem;
+}
+
+
+.service-item a{
+color: #fca61f;
+font-weight: bold;
+ 
+
+}
+.service-item a:hover{
+    color:#6f34fe;
+    border-bottom: 1px solid #6f34fe;
+}
+
+/* ==================service   part   CSS =====  end  Here ============ */
+
+
+
+/* ==================Skill   part   CSS =====  Start  Here ============ */
+
+
+.my-skill-part{
+    padding-top: 5rem;
+  
+}
+.skill-btn{
+    margin-top: 3rem;
+width: 10rem;
+height: 3rem;
+background-color: #29e9bc;
+font-weight: bold;
+border-radius: .3rem;
+
+}
+.skill-btn:hover{
+    background-color: transparent;
+    border: 1px solid #29e9bc;
+    color: #29e9bc !important;
+}
+
+
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  .progess-group {
+    background-color: #535c68;
+    width: 250px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  .circular-progress {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .circular-progress::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #535c68;
+  }
+  .course-value {
+    position: relative;
+    color: #eb4d4b;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .text {
+    margin-top: 18px;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+/* ==================Skill   part   CSS =====  End   Here ============ */
+
+/* ==================My creative  part   CSS =====  Start    Here ============ */
+
+
+
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color:white;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #fca61f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+.card-body{
+    background-color:black;
+}
+.card-title{
+    color: white;
+}
+/* ==================My creative  part   CSS =====  End    Here ============ */
+
+
+/* ==================Testimonial  part   CSS =====  Start    Here ============ */
+.testimonial-section{
+    background-color: #13131a;
+}
+
+.testimonial img:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 1s;
+}
+.heading small{
+    color: #3f396d;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.testimonial i{
+    font-size: 2.2rem;
+    color: white;
+    
+}
+.testimonial .nextprev-btn {
+    background-color:#fca61f;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin: 1rem;
+   
+}
+.prev-btn:hover{
+    background-color:#6f34fe;
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+.next:hover,.next-btn:hover{
+    background-color:#6f34fe;
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+/* ==================Testimonial  part   CSS =====  End  Here ============ */
+
+
+/* ==================Contact  part   CSS =====  Start   Here ============ */
+.submit-btn{
+    background-color:#fca61f;
+    color: white;
+}
+.submit-btn:hover{
+    background-color:#6f34fe;
+    transform: translateY(-10px);
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+.contact-details p{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+
+/* ==================Contact  part   CSS =====  End   Here ============ */
+
+/* ==================Footer   part   CSS =====  start   Here ============ */
+
+
+
+footer{
+    background-color: #211e39;
+}
+
+footer .link-group a{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+footer .link-group a:hover{
+    color: #fca61f;
+}
+.social-links button{
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px 15px;
+}
+.social-links .dribble{
+    color: #f33a7e;
+}
+.social-links button:hover{
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.social-links .dribble:hover{
+    background-color: #f33a7e;
+}
+.social-links .whatsapp{
+    color: #25D366;
+}
+.social-links .whatsapp:hover{
+    background-color: #25D366;
+}
+.social-links .behance{
+    color: #255afc;
+}
+.social-links .behance:hover{
+    background-color: #255afc;
+}
+
+/* ==================Footer   part   CSS =====  End   Here ============ */
+
+/* ===============Responsive part start here =============== */
+
+@media screen and (max-width:720px) {
+   
+
+      .open-menu{
+        display: block;
+    }
+
+    .nav-menu ul {
+        display: none;
+        
+        }  
+        .nav-btn button{
+            display: none;
+           
+            
+           }
+    .nav-btn{
+        display: flex;
+        color: white;
+        gap: 1rem;
+        font-size: 2rem;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap:0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        background-color:#6f34fe;
+        width: 22rem;
+        right: 5rem;
+        top: 5rem;
+        display: none;
+        transition: .6s;
+      
+      
+        
+        }
+
+        .nav-menu ul li{
+            
+            padding: 1rem;
+           
+            
+        }
+
+        .nav-menu ul li:hover{
+            background-color:#25D366 ;
+        }
+    
+        .nav-menu ul li a:hover::after{
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+            
+         
+         
+            
+        }
+
+        .banner-width{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .banner-text{
+            width: 25rem;
+        }
+        .banner-text h2{
+            width: 35rem;
+        }
+.banner-img img{
+
+  margin-top: 3rem;
+margin-left: -3rem;
+}
+        
+.my-service{
+   flex-wrap: wrap;
+}
+
+
+}
+
+
+
+
+
+
+/* ===============Responsive part End  here =============== */
